@@ -1,3 +1,15 @@
 .footer
    background-color: $color-blue-dark
    grid-column: full-start / full-end
+   display: grid
+   grid-template-columns: repeat(5, 1fr)
+   grid-template-rows: 1fr 1fr 
+   &__logo
+      grid-column: 1/-1 
+      grid-row: 1/2
+      justify-content: end
+   &__menu
+      grid-row: 2/3
+      grid-column: 1/-1   
+      align-items: end  
+

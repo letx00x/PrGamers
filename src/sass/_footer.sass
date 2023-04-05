@@ -1,21 +1,26 @@
 .footer
    background-color: $color-blue-dark
    grid-column: full-start / full-end
-   display: grid
-   grid-template-columns: repeat(10, 1fr)
-   grid-template-rows: 1fr 1fr 
-   &__logo
-      grid-column: 1/-1 
-      grid-row: 1/2
-      justify-self: center  
-      margin-top: 8rem    
-   &__menu
-      grid-row: 2/3
-      grid-column: 1/-1   
-      align-self: center  
-      justify-self: center
-.menu
-   
-
+   padding: 8rem 17rem
+.logo   
+   &__img
+      display: block
+      margin: 0 auto
+      margin-bottom: 8rem
+.nav
+   &__list
+      display: grid
+      grid-template-columns: repeat(5, auto)
+      grid-template-rows: 1fr
+      //grid-gap: 3.5rem
+      list-style: none
+   &__link
+      justify-content: center
+      color: white
+      text-decoration: none
+      text-transform: uppercase
+      font-weight: 300
+      font-size: 16px
+      line-height: 20px
          
 

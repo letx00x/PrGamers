@@ -1,3 +1,24 @@
 .gamers
    background-color: $color-blue-dark
    grid-column: col-start 7 / full-end
+   display: grid
+   grid-template-columns: min-content max-content   
+   grid-gap: 4rem 2rem
+   align-content: center
+   justify-content: center
+   &__title
+      color: $color-green-light
+      text-transform: uppercase
+      grid-column: 1 / -1   
+      justify-self: center   
+   &__img
+      width: 7rem
+   &__user-name
+      color: $color-gray-light
+   &__score
+      color: $color-gray-dark
+      font-weight: 300
+      font-size: 1.6rem   
+      line-height: 2rem 
+   &__text
+      align-self: center

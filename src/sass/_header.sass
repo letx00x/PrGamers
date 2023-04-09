@@ -1,6 +1,36 @@
 .header
    background-color: $color-blue-dark
    grid-column: full-start / col-end 6
+   padding: 5rem 5rem 5rem 6rem
+   display: grid
+   grid-template-rows: 1fr min-content minmax(10rem, min-content) 1fr
+   background: url(../img/header-bg.jpg) center / cover no-repeat 
+   &__line-text
+      font-weight: 700
+      font-size: 1.6rem
+      line-height: 2rem
+      color: #AAAAAA
+      display: grid
+      grid-template-columns: 1fr max-content 1fr
+      grid-column-gap: 2rem
+      align-items: center
+      margin-bottom: 1.5rem
+      &::before, &::after         
+         content: ''  
+         height: .1rem 
+         display: block    
+         background-color: $color-gray-dark
+   &__img
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      justify-items: center      
+      grid-gap: 2rem
+   &__img img
+      height: 2.5rem
+      filter: brightness(70%)
+   &__btn
+      justify-self: start
+      align-self: start
 
 .logo   
    display: block

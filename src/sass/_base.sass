@@ -7,6 +7,23 @@ $color-gray-dark: #AAAAAA
 $color-gray-light: #F5F5F5
     
 
+@mixin respond($breakpoint)
+   @if $breakpoint == phone
+      @media only screen and (max-width: 600px)
+         @content
+   
+   @if $breakpoint == tab-port
+      @media only screen and (max-width: 900px)
+         @content
+   
+   @if $breakpoint == tab-land
+      @media only screen and (max-width: 1170px)
+         @content
+
+   @if $breakpoint == big-screen
+      @media only screen and (min-width: 1800px)
+         @content
+
     
 *, ::after, ::before
     margin: 0
@@ -15,12 +32,13 @@ $color-gray-light: #F5F5F5
 
 html
     font-size: 62.5%
+    @include respond(tab-land)
+        font-size: 50%
 
 body
     font-family: "Montserrat", sans-serif    
     font-weight: 400
-    color: $color-gray-light
-    line-height: 113%
+    color: $color-gray-light    
     font-size: 1.6rem
     background-color: $color-gray-light    
 
